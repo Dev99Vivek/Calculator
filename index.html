@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Stylish Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="calculator">
+        <h1> Calculator</h1>
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number"><br><br>
+        
+        <label for="num2">Number 2 (if applicable):</label>
+        <input type="number" id="num2" placeholder="Enter second number"><br><br>
+        
+        <label>Operator:</label>
+        <div class="operator-select">
+            <span class="operator" onclick="setOperator('add')">+</span>
+            <span class="operator" onclick="setOperator('subtract')">-</span>
+            <span class="operator" onclick="setOperator('multiply')">*</span>
+            <span class="operator" onclick="setOperator('divide')">/</span>
+            <span class="operator" onclick="setOperator('sqrt')">√</span>
+            <span class="operator" onclick="setOperator('power')">^</span>
+            <span class="operator" onclick="setOperator('modulus')">%</span>
+        </div><br><br>
+        
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="clearCalculator()">Clear</button>
+        
+        <div class="result" id="resultContainer">Result: <span id="result"></span></div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
+        }
+        .calculator {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+        }
+        .dark-mode .calculator {
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        .calculator:hover {
+            transform: translateY(-10px);
+        }
+        .calculator h1 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .dark-mode .calculator h1 {
+            color: #ecf0f1;
+        }
+        .calculator input, .calculator select, .calculator button {
+            width: 90%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f58529, #feda75, #dd2a7b, #8134af, #515bd4);
+        }
+        .dark-mode .calculator input, .dark-mode .calculator select, .dark-mode .calculator button {
+            background: linear-gradient(135deg, #555, #666, #777, #888, #999);
+            border-color: #444;
+            
+        }
+        .calculator input:focus, .calculator select:focus {
+            border-color: #fda085;
+            box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+        }
+        .dark-mode .calculator input:focus, .dark-mode .calculator select:focus {
+            border-color: #fda085;
+            box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+        }
+        .calculator button {
+            background: #fda085;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .dark-mode .calculator button {
+            background: #3498db;
+        }
+        .calculator button:hover {
+            background: #f6d365;
+        }
+        .dark-mode .calculator button:hover {
+            background: #2980b9;
+        }
+        .operator-select {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .operator {
+            font-size: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode .operator {
+            border-color: #444;
+        }
+        .operator:hover {
+            background: #fda085;
+            color: #fff;
+        }
+        .dark-mode .operator:hover {
+            background: #2980b9;
+            color: #fff;
+        }
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #fda085;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .dark-mode .result {
+            color: #fda085;
+        }
+        .result.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fda085;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .dark-mode .toggle-btn {
+            background: #3498db;
+        }
+        .dark-mode .calculator ::placeholder{
+            color: white;
+        }
+    
